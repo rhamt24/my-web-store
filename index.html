@@ -6,19 +6,28 @@
 <title>zalxzhu store</title>
 <link rel="stylesheet" href="./Zals/style.css">
 <style>
+    @keyframes rgb-animation {
+        0% { background-color: #ff69b4; } /* Pink */
+        33% { background-color: #800080; } /* Ungu */
+        66% { background-color: #0000ff; } /* Biru */
+        100% { background-color: #ff69b4; } /* Pink */
+    }
+
     .contact-button {
         display: inline-block;
         padding: 10px 20px;
         font-size: 16px;
         color: #fff;
-        background-color: #76A045;
         border: none;
         border-radius: 5px;
         text-decoration: none;
         text-align: center;
         cursor: pointer;
+        background-color: #76A045;
+        animation: rgb-animation 5s infinite;
         transition: background-color 0.3s ease;
     }
+
     .contact-button:hover {
         background-color: #5a8034;
     }
