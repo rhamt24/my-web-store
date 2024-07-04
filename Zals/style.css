@@ -76,253 +76,76 @@ section#home {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    position: relative;
-}
-
-section#home::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
 section#home h2 {
-    font-size: 2.5em;
     margin: 0;
-    z-index: 1;
+    font-size: 2.5em;
 }
 
 /* Products Section */
-section#products {
-    background-color: #FFFFFF;
-    color: #333333;
-    position: relative;
-}
-
 .product-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
+    margin-top: 20px;
 }
 
 .product {
-    flex: 0 1 calc(50% - 40px);
-    margin: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border: 1px solid #ddd;
+    background-color: white;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
     text-align: center;
-    position: relative;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-}
-
-@media (max-width: 768px) {
-    .product {
-        flex: 0 1 calc(100% - 40px);
-    }
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 250px;
 }
 
 .product img {
-    width: 100%;
-    height: auto;
+    max-width: 100%;
     border-radius: 10px;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
 }
 
 .product h3 {
-    font-size: 1.5em;
     margin: 10px 0;
-    color: #333333;
+    font-size: 1.2em;
 }
 
 .product p {
-    font-size: 1.2em;
-    color: #555555;
+    color: #777777;
 }
 
-.product .description {
-    font-size: 1em;
-    margin-top: 10px;
-    color: #555555;
-    text-align: left; /* Menjadikan teks menjadi lurus */
-}
-
-.product .pler {  
-    font-size: 1em;
-    margin-top: 10px;
-    color: #d8bfd8;
-    text-align: left;
-    animation: slideIn 1s ease-in-out;
-}
-
-/* Animasi Button */
 .product .buy-now {
-    display: block;
+    display: inline-block;
     margin-top: 10px;
-    background-color: #d8bf;
+    padding: 10px 15px;
     color: white;
+    background-color: #FF6F61;
+    border-radius: 5px;
     text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.product .buy-now:hover {
-    background-color: #6B5B95;
-    transform: scale(1.1);
-}
-
-/* Animasi Produk saat diklik */
-.product:active {
-    transform: scale(0.95);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.4);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-/* Contact Section */
-section#contact {
-    background: rgba(255, 255, 255, 0.1);
-    color: #333333;
-    padding: 40px 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s, box-shadow 0.2s;
-    position: relative;
-}
-
-section#contact::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, #d8bfd8, #6B5B95);
-    background-size: 600% 600%;
-    animation: gradientAnimation 3s ease infinite;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    z-index: -1;
-}
-
-.contact-container {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.contact-container h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.contact-container form {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-container form input,
-.contact-container form textarea {
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.contact-container form button {
-    background-color: rgba(255, 255, 255, 0.4);
-    color: black;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.contact-container form button:hover {
-    background-color: #76A045;
+.product .buy-now:hover {
+    background-color: #E05244;
 }
 
-/* Button Contact Me */
-@keyframes rgb-gradient {
-  0% {
-    background-color: #ff00ff; /* Pink */
-  }
-  50% {
-    background-color: #800080; /* Ungu */
-  }
-  100% {
-    background-color: #0000ff; /* Biru */
-  }
-}
-
-.CONTACT-ME-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  border: none;
-  border-radius: 5px;
-  background-color: #ff00ff; /* Warna awal Pink */
-  animation: rgb-gradient 3s infinite alternate;
-  transition: background-color 0.5s ease-in-out;
-}
-
-.CONTACT-ME-btn:hover {
-  background-color: #800080; /* Warna saat hover Ungu */
-}
-
-/* Profile Styling */
-.profile {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.profile img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.profile p {
-    font-size: 14px;
-    margin: 0;
-}
-
-/* Testimonial Section */
-section#testimonials {
-    background-color: #F7F7F7;
-    color: #333333;
-    padding: 40px 20px;
-    text-align: center;
-}
-
+/* Testimonials Section */
 .testimonial-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .testimonial {
-    flex: 0 1 calc(50% - 40px);
-    margin: 20px;
-    background-color: #FFFFFF;
+    background-color: white;
     padding: 20px;
+    margin: 10px;
+    width: calc(25% - 20px);
     border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
     text-align: left;
 }
@@ -337,6 +160,32 @@ section#testimonials {
     }
 }
 
+/* Contact Section */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contact-me-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    color: #FFF;
+    background: linear-gradient(90deg, rgba(255,0,150,1) 0%, rgba(0,204,255,1) 100%);
+    background-size: 200% 200%;
+    text-decoration: none;
+    transition: background-position 0.5s ease;
+    cursor: pointer;
+}
+
+.contact-me-btn:hover {
+    background-position: 100% 0;
+}
+
 /* Animation Classes for Testimonials */
 .fade-in {
     animation: fadeIn 1s ease-in-out;
@@ -344,6 +193,10 @@ section#testimonials {
 
 .scale-in {
     animation: scaleIn 0.5s ease-in-out;
+}
+
+.slide-in {
+    animation: slideIn 0.5s ease-in-out;
 }
 
 .footer {
@@ -379,17 +232,4 @@ footer p {
 @keyframes slideIn {
     from { transform: translateX(-100%); opacity: 0; }
     to { transform: translateX(0); opacity: 1; }
-}
-
-/* Animation Classes */
-.fade-in {
-    animation: fadeIn 1s ease-in-out;
-}
-
-.scale-in {
-    animation: scaleIn 0.5s ease-in-out;
-}
-
-.slide-in {
-    animation: slideIn 0.5s ease-in-out;
-      }
+    }
