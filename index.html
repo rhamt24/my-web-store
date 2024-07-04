@@ -7,10 +7,10 @@
 <link rel="stylesheet" href="./Zals/style.css">
 <style>
     @keyframes rgb-animation {
-        0% { background-color: #ff69b4; } /* Pink */
-        33% { background-color: #800080; } /* Ungu */
-        66% { background-color: #0000ff; } /* Biru */
-        100% { background-color: #ff69b4; } /* Pink */
+        0% { background-color: #ffb6c1; } /* Pastel Pink */
+        33% { background-color: #dda0dd; } /* Pastel Purple */
+        66% { background-color: #add8e6; } /* Pastel Blue */
+        100% { background-color: #ffb6c1; } /* Pastel Pink */
     }
 
     .contact-button {
@@ -23,13 +23,14 @@
         text-decoration: none;
         text-align: center;
         cursor: pointer;
-        background-color: #76A045;
-        animation: rgb-animation 5s infinite;
+        background: linear-gradient(45deg, #ffb6c1, #dda0dd, #add8e6);
+        background-size: 400% 400%;
+        animation: rgb-animation 10s ease infinite;
         transition: background-color 0.3s ease;
     }
 
     .contact-button:hover {
-        background-color: #5a8034;
+        background-position: 100% 0;
     }
 </style>
 </head>
@@ -155,9 +156,9 @@
 </section>
 <section id="contact" class="slide-in">
     <div class="contact-container">
-        <h2 style="color: #000">CONTACT US</h2>
+        <h2 style="color: #000">ZALXZHU</h2>
         <h2 style="color: #d8bf">———————————</h2>
-        <a href="https://zalajah.vercel.app/" class="contact-button">Contact Me</a>
+        <a href="https://zalajah.vercel.app/" class="contact-button">CONTACT ME</a>
     </div>
 </section>
 </body>
