@@ -5,17 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>zalxzhu store</title>
 <link rel="stylesheet" href="./Zals/style.css">
-<style>
-    /* CSS tambahan untuk gambar testimoni */
-    .testimonial img {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        object-fit: cover;
-    }
-</style>
 </head>
 <body>
+<audio autoplay loop>
+    <source src="https://cdn.jsdelivr.net/gh/rhamt24/rhamt.github.io/rhamt/greedy.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
 <header>
     <h1 class="fade-in">ZALXZHU STORE</h1>
     <nav class="fade-in">
@@ -43,6 +38,8 @@
             <img src="https://telegra.ph/file/70b39e91c5385a7f726bb.jpg" alt="ZHU - SEWABOT">
             <h3>ZHU - SEWABOT</h3>
             <p>Rp 10.000 / bulan</p>
+            
+            <!-- perhatian <br> jika ingin ada paragraf -->
             <h2 class="pler"> KEUNTUNGAN </h2>
             <p class="description">
              FAST RESPOND <br>
@@ -131,10 +128,12 @@
 </section>
 <section id="contact" class="slide-in">
     <div class="contact-container">
-        <h2 style="color: #000">ZALXZHU</h2>
+        <h2 style="color: #000">CONTACT US</h2>
         <h2 style="color: #d8bf">———————————</h2>
-        <a href="https://zalajah.vercel.app/" class="CONTACT ME-btn">Contact Me</a>
-    </div>
-</section>
-</body>
-</html>
+        <form action="/" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div
