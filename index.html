@@ -7,10 +7,8 @@
 <link rel="stylesheet" href="./Zals/style.css">
 </head>
 <body>
-<audio autoplay loop controls crossorigin="anonymous">
-    <source src="https://cdn.jsdelivr.net/gh/rhamt24/rhamt.github.io/rhamt/greedy.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
+<audio src="https://cdn.jsdelivr.net/gh/rhamt24/rhamt.github.io/rhamt/greedy.mp3" id="linkmp3" class="hidden"></audio>
+
 <header>
     <h1 class="fade-in">ZALXZHU STORE</h1>
     <nav class="fade-in">
@@ -59,7 +57,7 @@
               UNLOCK NSFW <br>
               AKSES SEMUA FITUR PREMIUM <br>
               BEBAS MENGGUNAKAN BOT DI PC <br>
-              LIMIT UNLIMETED <br>
+              LIMIT UNLIMITED <br>
               WM STICKER
               </p>
             <a href="https://wa.me/6283846016963?text=bang+saya+mau+beli+premium" class="buy-now">Buy Now</a>
@@ -138,5 +136,13 @@
         </form>
     </div>
 </section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var audio = document.getElementById("linkmp3");
+        audio.play();
+        audio.loop = true;
+    });
+</script>
 </body>
 </html>
