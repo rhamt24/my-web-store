@@ -1,23 +1,32 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Mendapatkan data dari form
-    $name = htmlspecialchars($_POST['name']);
-    $email = htmlspecialchars($_POST['email']);
-    $message = htmlspecialchars($_POST['message']);
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
 
-    // Mengirimkan email
-    $to = 'rahmataprizaaaal@gmai.com'; // Ganti dengan email Anda
-    $subject = 'New Contact Us Message';
-    $headers = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
+    // Validate email
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Invalid email format";
+        exit;
+    }
+
+    $to = "rahmataprizaaaal@gmai.com";  // Ganti dengan email Anda
+    $subject = "New Contact Form Submission";
+    $headers = "From: $email" . "\r\n" .
+               "Reply-To: $email" . "\r\n" .
+               "X-Mailer: PHP/" . phpversion();
+
+    $body = "Name: $name\n";
+    $body .= "Email: $email\n";
+    $body .= "Message:\n$message\n";
 
     if (mail($to, $subject, $body, $headers)) {
-        echo 'Thank you for contacting us!';
+        echo "Message sent successfully!";
     } else {
-        echo 'Sorry, there was an error sending your message. Please try again later.';
+        echo "Failed to send message.";
     }
 } else {
-    echo 'Invalid request method.';
+    http_response_code(405);
+    echo "Method Not Allowed";
 }
 ?>
