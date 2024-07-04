@@ -142,7 +142,7 @@ section#home h2 {
     background-color: white;
     padding: 20px;
     margin: 10px;
-    width: calc(10% - 20px);
+    width: calc(25% - 20px);
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -150,11 +150,18 @@ section#home h2 {
     text-align: left;
 }
 
+.testimonial img {
+    width: 20px;  /* Set width to 20 pixels */
+    height: 20px; /* Set height to 20 pixels */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 50%; /* Optional: Make it circular */
+}
+
 .testimonial p {
     margin: 0 0 10px 0;
 }
 
-@media (max-width: 200px) {
+@media (max-width: 768px) {
     .testimonial {
         flex: 0 1 calc(100% - 40px);
     }
@@ -232,4 +239,4 @@ footer p {
 @keyframes slideIn {
     from { transform: translateX(-100%); opacity: 0; }
     to { transform: translateX(0); opacity: 1; }
-  }
+    }
